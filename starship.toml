@@ -72,6 +72,8 @@ show_always = true
 style_user = "bg:color_orange fg:color_fg0"
 style_root = "bg:color_orange fg:color_fg0"
 format = '[ $user ]($style)'
+[username.aliases]
+"Administrator" = "jza"
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
@@ -94,6 +96,17 @@ format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
 [git_status]
 style = "bg:color_aqua"
 format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+conflicted = '🏳'
+ahead = '🏎💨 ($count) '
+behind = '😰 ($count) '
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷 ($count) '
+stashed = '📦'
+modified = '📝 ($count) '
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
 
 [nodejs]
 style = "bg:color_blue"
