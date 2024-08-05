@@ -27,7 +27,15 @@ $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
+
+
+
+
+# A continuation prompt that displays two filled-in arrows
+continuation_prompt = '👀 '
+
 palette = 'gruvbox_dark'
+# ~/.config/starship.toml
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -72,14 +80,16 @@ show_always = true
 style_user = "bg:color_orange fg:color_fg0"
 style_root = "bg:color_orange fg:color_fg0"
 format = '[ $user ]($style)'
+
 [username.aliases]
-"Administrator" = "jza"
+"Administrator" = "Admin"
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
 format = "[ $path ]($style)"
 truncation_length = 3
-truncation_symbol = ""
+# truncation_symbol = "…/"
+
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -95,18 +105,26 @@ format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [git_status]
 style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
 conflicted = '🏳'
-ahead = '🏎💨 ($count) '
-behind = '😰 ($count) '
+ahead = '🏎💨'
+behind = '😰'
 diverged = '😵'
 up_to_date = '✓'
-untracked = '🤷 ($count) '
+untracked = '🤷 $count '
 stashed = '📦'
-modified = '📝 ($count) '
-staged = '[++\($count\)](green)'
+modified = '📝 $count '
+staged = 'staged: $count '
 renamed = '👅'
 deleted = '🗑'
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+
+
+[git_metrics]
+format = '([▴$added]($added_style))([▿$deleted]($deleted_style))'
+added_style = 'italic dimmed green'
+deleted_style = 'italic dimmed red'
+ignore_submodules = true
+disabled = false
 
 [nodejs]
 style = "bg:color_blue"
