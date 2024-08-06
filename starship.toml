@@ -28,9 +28,6 @@ $time\
 $line_break$character"""
 
 
-
-
-
 # A continuation prompt that displays two filled-in arrows
 continuation_prompt = '👀 '
 
@@ -115,7 +112,7 @@ stashed = '📦'
 modified = '📝 $count '
 staged = 'staged: $count '
 renamed = '👅'
-deleted = '🗑'
+deleted = '🗑️ '
 format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
 
 
