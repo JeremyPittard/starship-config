@@ -82,13 +82,13 @@ style_root = "bg:color_orange fg:color_fg0"
 format = '[ $user ]($style)'
 
 [username.aliases]
-"Administrator" = "Admin"
+"Administrator" = "jza"
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
 format = "[ $path ]($style)"
 truncation_length = 3
-# truncation_symbol = "…/"
+truncation_symbol = ""
 
 
 [directory.substitutions]
@@ -106,8 +106,8 @@ format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
 [git_status]
 style = "bg:color_aqua"
 conflicted = '🏳'
-ahead = '🏎💨'
-behind = '😰'
+ahead = '🏎💨 $count '
+behind = '😰 $count '
 diverged = '😵'
 up_to_date = '✓'
 untracked = '🤷 $count '
